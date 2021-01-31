@@ -1,0 +1,129 @@
+.bottom{
+    background: url(../img/bottom-bg.png) ;
+    background-position:  left 15% center;
+    background-repeat:  no-repeat;
+    background-size:auto;    
+    background-color: #0d0a09;
+    
+    @include sm{
+        background-position:  left -15% center;    
+    }
+    
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    &__content{
+        width: 60%;
+        
+        @include laptop{
+            width: 80%;
+        }
+        @include xs{
+            width: 90%;    
+        }
+        
+    }
+    
+    &__title{
+        margin-bottom: 40px;
+    }
+    &__text{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 70px;
+        
+        @include sm{
+            font-size: 14px;
+            line-height: 19px;    
+        }
+        
+    }
+}
+
+.form{
+    display:flex;
+//    justify-content: space-between;
+    @include sm{
+        flex-direction: column;
+
+    }
+    
+    &__email{
+        position: relative;
+        width: 100%;
+        
+        input{
+            display: block;
+            padding: 26px 21px 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 5px;
+            border: none;
+            max-width: 406px;
+            width: 100%;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: var(--color-orange);
+            outline: none;
+            
+            @include sm{
+                padding: 20px 15px 5px;
+                max-width: 500px;
+                font-size: 14px;
+                line-height: 19px;
+            }
+            
+            &::placeholder{
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                color: var(--color-orange);
+                
+                @include sm{
+                    font-size: 14px;
+                    line-height: 19px;    
+                }
+                
+            }
+        }
+        
+        span{
+            position: absolute;
+            left: 20px;
+            top: 5px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            opacity: .5;
+            
+            @include sm{
+                font-size: 12px;
+                line-height: 16px;    
+            }
+            
+        }
+    }
+    
+    &__submit{
+        max-width: 260px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        text-transform: capitalize;
+        color: var(--color-dark);
+        
+        @include sm{
+            margin-top: 15px;
+            max-width: 500px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+    
+}

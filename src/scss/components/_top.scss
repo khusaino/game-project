@@ -1,0 +1,146 @@
+.top{
+    background-image: url(../img/top-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    
+    &__wrapper{
+        width: 100%;
+        height: 100vh;
+        min-height: 800px;
+        max-height: 960px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        @include laptop{
+            min-height: 700px;
+        }
+        @include sm{
+            min-height: 600px;
+        }
+        
+    }
+    
+    &__title{
+        margin-bottom: 10px;
+        font-family: "bebas-neue";
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @include sm{
+            font-size: 33px;
+            line-height: 33px;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+    }
+    &__desc{
+        margin: 0;
+        margin-bottom: 35px;
+        font-family: "bebas-neue";
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        
+        @include sm{
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+    }
+    &__buy{
+//        margin-bottom: 367px;  
+        margin-bottom: calc(100vh/2.5);
+        padding: 17px;
+        background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+        border-radius: 4px;
+        position: relative;
+        
+        @include laptop{
+            margin-bottom: calc(100vh/4);
+        }
+        @include sm{
+            padding: 12px;
+            margin-bottom: calc(100vh/3);
+        }
+        
+        
+    }
+    &__link{
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-dark);
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;top: 0;bottom: 0;right: 0;
+        }
+        
+        @include sm{
+            font-size: 14px;
+            line-height: 19px;
+        }
+        
+    }
+    &__price{
+        display: inline-block;
+        position: relative;
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-dark);
+        &::after{
+            content: "";
+            position:absolute;
+            width: 1px;
+            height: 25px;
+            background-color: var(--color-dark);
+            left: 7px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-3deg);
+        }
+        @include sm{
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+    &__the-story{
+        font-size: 12px;
+        line-height: 22px;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 40px;
+        
+        svg{
+            position: absolute;
+            width: 30px;
+            height: 12px;
+            left: 50%;
+            bottom: -12px;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.swiper-top{
+    overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+

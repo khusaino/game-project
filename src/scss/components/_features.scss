@@ -1,0 +1,146 @@
+.features{
+    background: url(../img/features-bg.jpg) ;
+    background-position:  center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+    
+    @include sm{
+        background: url(../img/features-mob-bg.jpg) ;
+        background-position:  top;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+        min-height: 400px;
+        height: 70vh;
+    }
+    
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    &__content{
+//        margin-top: 150px;
+        margin-top: calc(100vh/5);
+        margin-right: 5%;
+        max-width: 450px;
+        width: 100%;
+        
+        @include laptop{
+            margin-right: 0%;
+        }
+        @include sm{
+            margin-top: calc(80vh/5);
+        }
+    }
+    
+    
+    &__title{
+        margin-bottom: 70px;
+    }
+}
+
+.accard{
+    
+    &__item{
+        margin-top: -10px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        
+        @include sm{
+            margin-top: -4px;
+        }
+        
+        &::before{
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--color-white);
+            border-radius: 50%;
+            left: 0;
+            top: 10px;
+            transition: all linear .3s;
+            
+            @include sm{
+                left: 15px;
+                top: 3px;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 0px;
+            border: 1px solid var(--color-white);
+            left: 6px;
+            top: 23px;
+            opacity: 0;
+            transition: all linear .4s;
+            
+            @include sm{
+                left: 21px;
+                top: 16px;
+            }
+        }
+        
+        &-active{
+            &::before{
+                background-color: var(--color-white);
+            }
+            &:not(:last-child){
+                &::after{
+                opacity: 1;
+                height: 311px;
+            }
+            }
+            
+            
+            .accard__text{
+                opacity: 1;
+                max-height: 1000px;;
+//                min-height: 100%;
+            }
+        }
+    }
+    
+    &__title{
+        
+        padding-left: 45px;
+        font-family: "bebas-neue";
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 2px;
+        color: var(--color-orange);
+        
+        @include sm{
+            font-size: 21px;
+            line-height: 21px;
+//            text-align: center;
+            letter-spacing: 2px;
+        }
+    }
+    
+    &__text{
+        max-width: 362px;
+        padding-left: 45px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: justify;
+        opacity: 0;
+        max-height: 0;
+//          transition: all linear .4s;
+        
+        @include sm{
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    
+
+}

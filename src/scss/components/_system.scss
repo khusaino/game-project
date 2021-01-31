@@ -1,0 +1,114 @@
+.system{
+//    padding-top: 145px;
+//    padding-top: calc(100vh/6);
+    background: url(../img/system-bg.jpg) ;
+    background-position:  center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+    text-align: center;
+    @include sm{
+        height: auto;    
+    }
+    @include xs{
+        padding-top: 50px;    
+    }
+    
+    &__container{
+        display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+    
+    &__top{
+        margin-top: calc(80vh/10);
+        margin-bottom: 70px;
+    }
+    
+    @include laptop{
+//        padding-top: calc(80vh/5);
+    }
+    
+    &__title{
+//        margin-bottom: 130px;
+//        margin-bottom: calc(100vh/6.5);
+//        padding-top: ;
+        @include xs{
+            letter-spacing: 1px;    
+        }
+        
+    }
+}
+
+.grid{
+    max-width: 575px;
+    width: 100%;
+    max-height: 400px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    
+    @include sm{
+        max-width: 360px;
+    }
+    
+    &__item{
+        padding: 14px 0 30px 19px;
+        @include sm{
+            padding: 9px 0 7px 9px;
+        }
+        &:not(:last-child){
+            width: 50%;
+        }
+        &:last-child{
+            padding-top: 30px;
+        }
+    }
+    
+    svg{
+        position: absolute;
+        left: 0;top: 0;
+        width: 575px;
+        height: 400px;
+        
+        @include sm{
+            width: 360px;
+//            height: auto;
+            top: -70px;
+        }
+        @include xs{
+            display: none;
+        }
+        
+    }
+    
+    &__title{
+        padding: 0;
+        margin: 0;
+        font-family: "bebas-neue";
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        color: var(--color-orange);
+        text-transform: uppercase;
+        @include sm{
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 2px;
+        }
+    }
+    &__text{
+        margin-bottom: 0;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        
+        @include sm{
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+    }
+}
